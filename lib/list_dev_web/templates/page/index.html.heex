@@ -1,0 +1,22 @@
+
+<section class="phx-hero">
+  <h1>Users</h1>
+</section>
+<section class="row">
+  <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email-id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= for item <- @entries do %>
+        <tr>
+          <td><%= item["first_name"] <> " " <> item["last_name"] %></td>
+          <td><%= item["email"] %></td>
+        </tr>
+    <% end %>
+  </tbody>
+</table>
+</section>
