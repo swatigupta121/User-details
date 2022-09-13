@@ -17,7 +17,14 @@ defmodule ListDevWeb.Router do
   scope "/", ListDevWeb do
     pipe_through :browser
 
+    # get "/pages", PageController, :index
+    # post "/create", PageController, :create
+    # resources "/pages", PageController
     get "/", PageController, :index
+    post "/", PageController, :create
+    post "/update", PageController, :update
+    get "/new", PageController, :new
+    get "/edit", PageController, :edit
   end
 
   # Other scopes may use custom stacks.
